@@ -85,21 +85,46 @@ console.log(greeter.whoAreYou("Travis"));
 let stringCollector = {
 	collection: ['0'],
 	collect:function(str){
-		this.collection[0] = str.split('').reverse().join('');
+	this.collection[this.collection.length] = str.split('').reverse().join('');
+	this.admireCollection(str);
 	},
-	admireCollection:function(){
-		let arrayAgain = this.collection[0].split('')
-		for(i in arrayAgain) 
+	admireCollection:function(str){
+		//console.log(this.collection[this.collection.length])
+		let arrayAgain = str.split('')
+		for(i = 0; i <= arrayAgain.length; i++){
 			console.log(arrayAgain[i])
+
+		}
 	}
 }
-stringCollector.collect('123456789');
-stringCollector.admireCollection();
-
-console.log(stringCollector.collection[0])
+stringCollector.collect('collection');
+stringCollector.collect('12345678');
 
 
+//console.log(stringCollector.collection[0])
 
+
+
+// Make an object called atm which has two properties:
+
+// totalCash, the total amount of cash in the atm
+// dispenseTwenties, a method with takes a number of twenties and, if there is enough cash, returns the total number of cash it is giving out.
+// If there is not enough cash, return null instead.
+// For example, if the atm has 200 dollars left, the call to dispenseTwenties(6) should return 120, and update the totalCash to 80. However a call to dispenseTwenties(11) should return null.
+
+
+let atm = {
+	totalCash:200,
+	dispenseTwenties:function(num){
+		if((num/20)<=(this.totalCash/20)){
+			//console.log(num/20)
+			//console.log(this.totalCash/20)
+			return this.totalCash+" left Dispence Cash";
+		}return null;
+	}
+}
+
+atm.dispenseTwenties(150);
 
 
 
