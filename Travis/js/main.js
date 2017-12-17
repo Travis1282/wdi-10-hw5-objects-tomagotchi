@@ -37,3 +37,63 @@ myInformation = {
 
 console.log(myInformation.statement())
 console.log(myInformation.birthday())
+
+
+
+
+
+// Create an object called greeter.
+// Inside the greeter object, create a method called hello that takes a name as a parameter and returns a greeting message followed by the name parameter.
+// Example: Oh hello there, Matthew
+
+// Create another method inside greeter called goodbye that takes a name as a parameter and returns a farewell greeting followed by the name parameter.
+// Example: Arrivederci, Matthew!
+
+// Create a final method inside greeter called whoAreYou that takes a name as a parameter and returns "Oh right! ", followed by the name parameter, followed by " how could I forget...!"
+// Example: Oh right! Matthew how could i forget...!
+
+// Play around executing your functions by accessing them through the object.
+
+
+
+greeter = {
+	hello:(name)=>{
+		return "Oh hello there, "+name;
+	},
+	goodbye:(name)=>{
+		return "Arrivederci, "+name;
+	},
+	whoAreYou:(name)=>{
+		return "Oh right! "+name+" how could i forget...!";
+
+	}
+
+}
+
+
+console.log(greeter.hello("Travis"))
+console.log(greeter.goodbye("Travis"))
+console.log(greeter.whoAreYou("Travis"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
