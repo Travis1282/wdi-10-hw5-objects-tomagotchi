@@ -12,33 +12,25 @@ function logElements(value) {
 
 // Map to a new array that stores only the first letter from each word in more_words.
 const more_words = ["Joe", "Overeats", "Eggs"];
-// Expected result:
-
-// ["J", "O", "E"]
-
-
-
 more_Letters = more_words.map((letters)=>{
 	return letters.split('')
 });
 
 
-// let numBlers =[2,4,5,6,9,10]
+// .reduce iterates over the elements in an array and smooshes them together into a single variable according to the instructions in the iterator. Like .map, it returns a new value and does not alter the original array.
 
-// const Odds = numBlers.filter((num)=>{
-// 	return num % 2==1
-// }).map((num)=>{
-// 	return 2 * 10;
-// })
+// Return the product of the numbers in arr.
+const arr = [8, 8, 8, 8, 8, 8, 8, 8];
 
 
+const sumedArr = arr.reduce((a,b)=>{
+	return (a+b)
+})
 
 
-
-
-
-
-
+// const added =  [1,2,4,5,6,7].reduce((a,b)=>{
+// 	return mathsum(a+b);
+// },[])
 
 
 
