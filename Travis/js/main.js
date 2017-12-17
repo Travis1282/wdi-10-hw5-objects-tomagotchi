@@ -1,10 +1,10 @@
 // Make an object called clicker, which has a clickCount property, and a click method.
 // Have the click method increment the clickCount by 1 each time it is called.
 
-clicker = {
+let clicker = {
 	clickCount: 0,
 	click:()=>{ 
-		this.clicker.clickCount++;
+		this.clickCount++;
 	}
 }
 clicker.click();
@@ -19,19 +19,18 @@ console.log(clicker.clickCount)
 // You're feeling funky and decide that your new name is Rumpelstiltskin. Call the method that will update your name and assign this new name. Log your object to confirm the changes.
 
 
-myInformation = {
+let myInformation = {
 	name: 'Travis',
 	age: 35,
 	hobby: 'beekeeper',
 	statement:()=>{
-		let futureAge = this.myInformation.age+10;
-		return "My name is "+this.myInformation.name+", I will be "+ futureAge+" in 10 years" 
+		let futureAge = this.age+10;
+		return "My name is "+this.name+", I will be "+ futureAge+" in 10 years" 
 	},
 	birthday:()=>{
 		let ageIncrement = 1;
-		this.myInformation.age = this.myInformation.age + ageIncrement;
-		return "My name is "+this.myInformation.name+", I will be "+ this.myInformation.age+" on my birthday" 
-
+		this.age = this.age + ageIncrement;
+		return "My name is "+this.name+", I will be "+ this.age+" on my birthday" 
 	}
 }
 
@@ -56,7 +55,7 @@ console.log(myInformation.birthday())
 
 
 
-greeter = {
+let greeter = {
 	hello:(name)=>{
 		return "Oh hello there, "+name;
 	},
@@ -65,22 +64,39 @@ greeter = {
 	},
 	whoAreYou:(name)=>{
 		return "Oh right! "+name+" how could i forget...!";
-
 	}
-
 }
 
-
-console.log(greeter.hello("Travis"))
-console.log(greeter.goodbye("Travis"))
-console.log(greeter.whoAreYou("Travis"))
-
+console.log(greeter.hello("Travis"));
+console.log(greeter.goodbye("Travis"));
+console.log(greeter.whoAreYou("Travis"));
 
 
 
+// Make an object called stringCollector, which has:
+
+// a collection property - an array to hold strings
+// a collect method which takes a string as a parameter
+// the string collector prefers the strings to be totally reversed in their collection, however, so make sure to reverse it before adding it to the collection
+// add an admireCollection method which prints out each string in the collection to the console, one line at a time
 
 
 
+let stringCollector = {
+	collection: ['0'],
+	collect:function(str){
+		this.collection[0] = str.split('').reverse().join('');
+	},
+	admireCollection:function(){
+		let arrayAgain = this.collection[0].split('')
+		for(i in arrayAgain) 
+			console.log(arrayAgain[i])
+	}
+}
+stringCollector.collect('123456789');
+stringCollector.admireCollection();
+
+console.log(stringCollector.collection[0])
 
 
 
