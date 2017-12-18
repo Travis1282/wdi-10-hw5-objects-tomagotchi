@@ -23,14 +23,50 @@ more_Letters = more_words.map((letters)=>{
 const arr = [8, 8, 8, 8, 8, 8, 8, 8];
 
 
-const sumedArr = arr.reduce((a,b)=>{
+let sumedArr = arr.reduce((a,b)=>{
 	return (a+b)
 })
 
 
-// const added =  [1,2,4,5,6,7].reduce((a,b)=>{
-// 	return mathsum(a+b);
-// },[])
+// Using iterators to find the total sheepCount of sheep shorn by sheep shearers at the 1623 Sheep Shearing Feast:
+
+
+const sheepShearers = [
+    {
+        name: "Tim",
+        age: 20,
+        sheepCount: 18
+    },
+    {
+        name: "C3PO",
+        age: 200,
+        sheepCount: 320
+    },
+    {
+        name: "Cousin It",
+        age: Infinity,
+        sheepCount: 2900
+    }
+];
+
+let totalSheep = sheepShearers.map((sheeps)=>{
+	return sheeps.sheepCount;
+}).reduce((a,b)=>{
+ 	return (a+b)
+});
+
+console.log(totalSheep)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
