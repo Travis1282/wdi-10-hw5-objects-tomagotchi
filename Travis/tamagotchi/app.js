@@ -16,8 +16,38 @@ var tamagotchi1 = {
   restedness: 10,
   health: 10,
   cry: function(){
-  	console.log("Waaaaaa!!!")
+  	console.log("I'm "+this.name+" Waaaaaa!!!")
+  	this.foodInTummy--
+  },
+  puke: function(){
+  	console.log(this.name+" feel great! Bleeeeh :O~~")
+  }, 
+  yawn: function(){
+  	console.log("Yaaaawwwwn")
   }
 }
 
 tamagotchi1.cry()
+
+// Write a method puke into your Tamagotchi object that console.logs the Tamagotchi having a sick-up (example: Bleeeeh :O~~)
+
+// Invoke the puke method to confirm that it works.
+
+tamagotchi1.puke()
+
+// Write a method yawn into your Tamagotchi object that console.logs the Tamagotchi yawning when it is tired (example: Yaaaawwwwn!).
+
+// Invoke the yawn method.
+
+tamagotchi1.yawn()
+
+
+
+
+
+
+
+
+
+
+
