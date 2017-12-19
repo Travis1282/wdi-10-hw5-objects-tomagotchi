@@ -26,22 +26,40 @@ let tamagotchi1 = {
   yawn: function(){
   	this.restedness--
   	console.log(this.name+"Yaaaawwwwn"+" Restedness: "+this.restedness)
+  }, 
+  timers:function(){
+  	let cryTimer = setInterval(()=>{
+		this.cry();
+	},6000)
+
+	let yawnTimer = setInterval(()=>{
+		this.yawn();
+	},10000)
+
+	let pukeTimer = setInterval(()=>{
+		this.puke();
+	},25000)
+
+	let stop = clearInterval(this.timer)
   }
 }
 
-tamagotchi1.cry()
+tamagotchi1.timers()
+
+
+// tamagotchi1.cry()
 
 // Write a method puke into your Tamagotchi object that console.logs the Tamagotchi having a sick-up (example: Bleeeeh :O~~)
 
 // Invoke the puke method to confirm that it works.
 
-tamagotchi1.puke()
+// tamagotchi1.puke()
 
 // Write a method yawn into your Tamagotchi object that console.logs the Tamagotchi yawning when it is tired (example: Yaaaawwwwn!).
 
 // Invoke the yawn method.
 
-tamagotchi1.yawn()
+// tamagotchi1.yawn()
 
 
 
@@ -64,13 +82,29 @@ let tamagotchi2 = {
   yawn: function(){
   	this.restedness--
   	console.log(this.name+"Yaaaawwwwn"+" Restedness: "+this.restedness)
+  },
+    timers:function(){
+  	let cryTimer = setInterval(()=>{
+		this.cry();
+	},6000)
+
+	let yawnTimer = setInterval(()=>{
+		this.yawn();
+	},10000)
+
+	let pukeTimer = setInterval(()=>{
+		this.puke();
+	},25000)
+
+	let stop = clearInterval(this.timer)
   }
 }
+tamagotchi2.timers()
 
 
-tamagotchi2.cry()
-tamagotchi2.puke()
-tamagotchi2.yawn()
+// tamagotchi2.cry()
+// tamagotchi2.puke()
+// tamagotchi2.yawn()
 
 
 // Let's make another object, a player. The player should have a key of name and you can provide the value.
@@ -114,20 +148,20 @@ player.knockOutTamagotchi(tamagotchi1)
 
 
 
-let cryTimer = setInterval(()=>{
-		tamagotchi2.cry();
-		tamagotchi1.cry();
-},6000)
+// let cryTimer = setInterval(()=>{
+// 		tamagotchi2.cry();
+// 		tamagotchi1.cry();
+// },6000)
 
-let yawnTimer = setInterval(()=>{
-		tamagotchi1.yawn();
-		tamagotchi2.yawn();
-},10000)
+// let yawnTimer = setInterval(()=>{
+// 		tamagotchi1.yawn();
+// 		tamagotchi2.yawn();
+// },10000)
 
-let pukeTimer = setInterval(()=>{
-		tamagotchi1.puke();
-		tamagotchi2.puke();
-},25000)
+// let pukeTimer = setInterval(()=>{
+// 		tamagotchi1.puke();
+// 		tamagotchi2.puke();
+// },25000)
 
 
 
