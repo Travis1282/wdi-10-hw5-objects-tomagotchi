@@ -84,6 +84,9 @@ let player = {
 	},
 	feedTamagotchi: function(tamagotchi){
 		tamagotchi.foodInTummy++
+	},
+	knockOutTamagotchi: function(tamagotchi){
+		tamagotchi.restedness++
 	}
 }
 
@@ -98,6 +101,33 @@ let player = {
 
 player.feedTamagotchi(tamagotchi2)
 
+player.knockOutTamagotchi(tamagotchi1) 
+
+
+// We're going to ignore the player object for a while, and just focus on bringing our Tamagotchi to life.
+// We are going to automate our Tamagotchi object! Let's use setInterval.
+// Write a setInterval hungerTimer that will make the Tamagotchi cry every 6 seconds (6000 milliseconds)
+// Write a setInterval yawnTimer that will make the Tamagotchi yawn every 10 seconds
+// Write a setInterval sickTimer that will make the Tamagotchi puke every 25 seconds
+// NOTE: As it is, to stop the timers from running you will need to comment them out and refresh the page.
+// To stop the interval of the hungerTimer, use clearInterval(hungerTimer) globally.
+
+
+
+let cryTimer = setInterval(()=>{
+		tamagotchi2.cry();
+		tamagotchi1.cry();
+},6000)
+
+let yawnTimer = setInterval(()=>{
+		tamagotchi1.yawn();
+		tamagotchi2.yawn();
+},10000)
+
+let pukeTimer = setInterval(()=>{
+		tamagotchi1.puke();
+		tamagotchi2.puke();
+},25000)
 
 
 
