@@ -80,9 +80,32 @@ tamagotchi2.yawn()
 let player = {
 	name: "player",
 	sayName: function(){
-		console.log("Hi my name is: "this.name)
+		console.log("Hi my name is: "+this.name)
+	},
+	feedTamagotchi: function(tamagotchi){
+		tamagotchi.foodInTummy++
 	}
 }
+
+// Objects can work together! All we need to do is refer to a previously defined object. Let's give our player a feedTamagotchi method that feeds our tamagotchi. Start by choosing one Tamogatchi to feed and increase their foodInTummy by 1 each time this method is called.
+
+// Check that the Tamogatchi is successfully being fed.
+
+// Update your feedTamagotchi method to have your player feed both of the Tamogatchi.
+
+// Run your method and check that both are being fed.
+
+
+player.feedTamagotchi(tamagotchi2)
+
+
+
+
+
+
+
+
+
 
 
 
