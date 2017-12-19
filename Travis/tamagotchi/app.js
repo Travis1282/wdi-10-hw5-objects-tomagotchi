@@ -9,7 +9,7 @@
 
 
 
-var tamagotchi1 = {
+let tamagotchi1 = {
   name: "Simon",
   creatureType: "Dragon",
   foodInTummy: 10,
@@ -47,7 +47,7 @@ tamagotchi1.yawn()
 
 
 
-var tamagotchi2 = {
+let tamagotchi2 = {
   name: "booRadily",
   creatureType: "caucasian",
   foodInTummy: 10,
@@ -71,6 +71,27 @@ var tamagotchi2 = {
 tamagotchi2.cry()
 tamagotchi2.puke()
 tamagotchi2.yawn()
+
+
+// Let's make another object, a player. The player should have a key of name and you can provide the value.
+
+// Let's give your player an action sayName that will log the sentence: "Hi my name is: " with your player's name at the end.
+
+let player = {
+	name: "player",
+	sayName: function(){
+		console.log("Hi my name is: "this.name)
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
 
