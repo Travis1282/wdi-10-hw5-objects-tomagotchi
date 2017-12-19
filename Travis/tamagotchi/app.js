@@ -16,14 +16,16 @@ var tamagotchi1 = {
   restedness: 10,
   health: 10,
   cry: function(){
-  	console.log("I'm "+this.name+" Waaaaaa!!!")
   	this.foodInTummy--
+  	console.log("I'm "+this.name+" Waaaaaa!!!. I only have "+this.foodInTummy+" left in my stomach")
   },
   puke: function(){
-  	console.log(this.name+" feel great! Bleeeeh :O~~")
+  	this.health--
+  	console.log(this.name+" feel great! Bleeeeh :O~~. New health: "+this.health)
   }, 
   yawn: function(){
-  	console.log("Yaaaawwwwn")
+  	this.restedness--
+  	console.log(this.name+"Yaaaawwwwn"+" Restedness: "+this.restedness)
   }
 }
 
@@ -45,7 +47,30 @@ tamagotchi1.yawn()
 
 
 
+var tamagotchi2 = {
+  name: "booRadily",
+  creatureType: "caucasian",
+  foodInTummy: 10,
+  restedness: 10,
+  health: 10,
+  cry: function(){
+  	this.foodInTummy--
+  	console.log("I'm "+this.name+" Waaaaaa!!!. I only have "+this.foodInTummy+" left in my stomach")
+  },
+  puke: function(){
+  	this.health--
+  	console.log(this.name+" feel great! Bleeeeh :O~~. New health: "+this.health)
+  }, 
+  yawn: function(){
+  	this.restedness--
+  	console.log(this.name+"Yaaaawwwwn"+" Restedness: "+this.restedness)
+  }
+}
 
+
+tamagotchi2.cry()
+tamagotchi2.puke()
+tamagotchi2.yawn()
 
 
 
